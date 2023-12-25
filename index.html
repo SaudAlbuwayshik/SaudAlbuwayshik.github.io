@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 7px;
+            text-align: left;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            /* Adjust styles for smaller screens */
+            img {
+                width: 100%;
+                /* Make the logo take full width */
+            }
+
+            div {
+                padding: 10px;
+                /* Add some padding to the div containing form elements */
+                margin-bottom: 20px;
+                /* Adjust bottom margin to create space between divs */
+            }
+
+            /* Ensure the table is scrollable on smaller screens */
+            table {
+                overflow-x: auto;
+            }
+
+            /* Adjust button width and spacing */
+            button {
+                width: 100%;
+                margin-top: 20px;
+                /* Adjust top margin to create space between buttons and previous elements */
+                margin-bottom: 30px;
+                /* Adjust bottom margin to create space between buttons and following elements */
+            }
+
+            /* Increase the width of the Select2 dropdown lists */
+            .select2 {
+                width: 100% !important;
+                margin-bottom: 10px;
+                /* Adjust bottom margin to create space between dropdowns */
+            }
+        }
+    </style>
+
+    <title>Order Page</title>
+</head>
+
+<body>
+
+    <!-- Business Logo -->
+    <img src="FreshToDoorLogo.png" alt="Business Logo">
+
+    <!-- Dropdowns and Input Box -->
+    <div>
+        <label for="item">Item:</label>
+        <select id="item" class="select2">
+            
+        <option value="Alfalfa Sprouts">Alfalfa Sprouts</option>
+        <option value="Asparagus">Asparagus</option>
+        <option value="Avocado Bulk 10KG">Avocado Bulk 10KG</option>
+        <option value="Avocado Hass Medium">Avocado Hass Medium</option>
+        <option value="Avocado">Avocado</option>
+        <option value="Avocado Hass Large">Avocado Hass Large</option>
+        <option value="Baby Bok Choy">Baby Bok Choy</option>
+        <option value="Baby Cos Lettuce">Baby Cos Lettuce</option>
+        <option value="Baby Cos Lettuce Twin Pack">Baby Cos Lettuce Twin Pack</option>
+        <option value="Baby Eggplant">Baby Eggplant</option>
+        <option value="Baby Spinach 15KG">Baby Spinach 15KG</option>
+        <option value="Baby Spinach 3KG">Baby Spinach 3KG</option>
+        <option value="Banana">Banana</option>
+        <option value="Basil">Basil</option>
+        <option value="Beansprouts 250g">Beansprouts 250g</option>
+        <option value="Beansprouts 5KG BAG">Beansprouts 5KG BAG</option>
+        <option value="Beetroot  Large 10KG">Beetroot Large 10KG</option>
+        <option value="Beetroot Loose">Beetroot Loose</option>
+        <option value="Bird Eye Chilli">Bird Eye Chilli</option>
+        <option value="Blueberries">Blueberries</option>
+        <option value="Broccoli Large">Broccoli Large</option>
+        <option value="Brown Onion Large 20 KG">Brown Onion Large 20 KG</option>
+        <option value="Brown Onion Medium 10KG">Brown Onion Medium 10KG</option>
+        <option value="Brown Onions Loose">Brown Onions Loose</option>
+        <option value="Brushed Potato 5KG">Brushed Potato 5KG</option>
+        <option value="Brussels Sprout">Brussels Sprout</option>
+        <option value="Brussels Sprout Loose">Brussels Sprout Loose</option>
+        <option value="Butternut Pumpkin">Butternut Pumpkin</option>
+        <option value="Cage Eggs 600G">Cage Eggs 600G</option>
+        <option value="Cage Eggs 700G">Cage Eggs 700G</option>
+        <option value="Cage Eggs 800g">Cage Eggs 800g</option>
+        <option value="Carrot">Carrot</option>
+        <option value="Carrot Large 15KG">Carrot Large 15KG</option>
+        <option value="Carrot Large 20kg">Carrot Large 20kg</option>
+        <option value="Cauliflower">Cauliflower</option>
+        <option value="Cauliflower">Cauliflower</option>
+        <option value="Cauliflower Florets">Cauliflower Florets</option>
+        <option value="Celery">Celery</option>
+        <option value="Cherry Tomatoes">Cherry Tomatoes</option>
+        <option value="Cherry Tomatoes">Cherry Tomatoes</option>
+        <option value="Chinese Broccoli">Chinese Broccoli</option>
+        <option value="Chives">Chives</option>
+        <option value="Cocktail Potato 20KG">Cocktail Potato 20KG</option>
+        <option value="Coriander">Coriander</option>
+        <option value="Curly Parsley">Curly Parsley</option>
+        <option value="Curry Leaves">Curry Leaves</option>
+        <option value="Dill">Dill</option>
+        <option value="Dill">Dill</option>
+        <option value="Eggplant">Eggplant</option>
+        <option value="Eggplant Medium">Eggplant Medium</option>
+        <option value="Eggplants Large">Eggplants Large</option>
+        <option value="English Spinach">English Spinach</option>
+        <option value="English Spinach">English Spinach</option>
+        <option value="Flat Mushroom">Flat Mushroom</option>
+        <option value="Garlic Net">Garlic Net</option>
+        <option value="Garlic Peeled 10KG">Garlic Peeled 10KG</option>
+        <option value="Garlic Peeled 1KG">Garlic Peeled 1KG</option>
+        <option value="Ginger">Ginger</option>
+        <option value="Granny Smith Apple">Granny Smith Apple</option>
+        <option value="Green Beans">Green Beans</option>
+        <option value="Green Beans">Green Beans</option>
+        <option value="Green Cabbage">Green Cabbage</option>
+        <option value="Green Capsicum">Green Capsicum</option>
+        <option value="Green Capsicum">Green Capsicum</option>
+        <option value="Green Long Chili">Green Long Chili</option>
+        <option value="Green Long Chili">Green Long Chili</option>
+        <option value="Green Pears">Green Pears</option>
+        <option value="Honeydew">Honeydew</option>
+        <option value="Iceberg Lettuce">Iceberg Lettuce</option>
+        <option value="Iceberg Lettuce">Iceberg Lettuce</option>
+        <option value="Japanese Pumpkin">Japanese Pumpkin</option>
+        <option value="Kale">Kale</option>
+        <option value="Kiwi Fruit">Kiwi Fruit</option>
+        <option value="Lebanese Cucumber">Lebanese Cucumber</option>
+        <option value="Lebanese Cucumber">Lebanese Cucumber</option>
+        <option value="Leek">Leek</option>
+        <option value="Leeks">Leeks</option>
+        <option value="Lemon">Lemon</option>
+        <option value="Lemon Loose">Lemon Loose</option>
+        <option value="Lime 5KG">Lime 5KG</option>
+        <option value="Lime Loose">Lime Loose</option>
+        <option value="Melody Cherry Tomatoes">Melody Cherry Tomatoes</option>
+        <option value="Micro Herbs">Micro Herbs</option>
+        <option value="Micro Lemon Balm">Micro Lemon Balm</option>
+        <option value="Mint">Mint</option>
+        <option value="Mix Capsicum">Mix Capsicum</option>
+        <option value="Mushrooms_1">Mushrooms_1</option>
+        <option value="Okra">Okra</option>
+        <option value="Orange">Orange</option>
+        <option value="Orange">Orange</option>
+        <option value="Parsley">Parsley</option>
+        <option value="Parsley">Parsley</option>
+        <option value="Passion Fruit">Passion Fruit</option>
+        <option value="Peeled Potatoes 10kg">Peeled Potatoes 10kg</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Pink Lady Apple">Pink Lady Apple</option>
+        <option value="Plantain Banana">Plantain Banana</option>
+        <option value="Pomegranate">Pomegranate</option>
+        <option value="Red Cabbage">Red Cabbage</option>
+        <option value="Red Capsicum">Red Capsicum</option>
+        <option value="Red Capsicum">Red Capsicum</option>
+        <option value="Red Long Chilli">Red Long Chilli</option>
+        <option value="Red Onion Large 10KG">Red Onion Large 10KG</option>
+        <option value="Red Onion Medium 10KG">Red Onion Medium 10KG</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <select id="description" class="select2">
+        <option value="box">Box</option>
+          <option value="Bag">Bag</option>
+          <option value="Kg">Kg</option>
+          <option value="Bunch">Bunch</option>
+          <option value="Market Bunch (Deck)">Market Bunch (Deck)</option>
+          <option value="Try">Try</option>
+          <option value="Punnet">Punnet</option>
+          <option value="Pot">Pot</option>
+        </select>
+
+        <label for="qty">Qty:</label>
+        <input type="text" id="qty">
+
+        <button onclick="saveEntry()">Save</button>
+    </div>
+
+    <!-- Table to Display Entries -->
+    <table id="orderTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Entries will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Confirm Order Button -->
+    <button onclick="confirmOrder()">Confirm Order</button>
+
+    <!-- Add Select2 JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <script>
+        // Initialize Select2 for the dropdowns
+        $(document).ready(function () {
+            $('.select2').select2();
+        });
+
+        function saveEntry() {
+            var item = $('#item').val();
+            var description = $('#description').val();
+            var qty = $('#qty').val();
+
+            // Validate inputs
+            if (item && description && qty) {
+                var table = $('#orderTable tbody')[0];
+                var newRow = table.insertRow(table.rows.length);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                cell1.innerHTML = item;
+                cell2.innerHTML = description;
+                cell3.innerHTML = qty;
+
+                // Clear input fields
+                $('#item').val('').trigger('change');
+                $('#description').val('').trigger('change');
+                $('#qty').val('');
+            } else {
+                alert('Please fill in all fields');
+            }
+        }
+
+        function confirmOrder() {
+            var table = $('#orderTable tbody')[0];
+            var rows = $(table).find('tr');
+            var orderData = [];
+
+            for (var i = 0; i < rows.length; i++) {
+                var cells = $(rows[i]).find('td');
+                orderData.push({
+                    Item: $(cells[0]).text(),
+                    Description: $(cells[1]).text(),
+                    Quantity: $(cells[2]).text()
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>
